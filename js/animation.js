@@ -1,0 +1,16 @@
+/* Hover animation*/
+
+@keyframes hover{
+ 0% {
+    transform: translateY(0);
+   /*some code*/
+    }
+ 50% {
+  transform: translateY(-5px);
+  /*some other code*/
+    }
+100% {
+  transform: translateY(0);
+  /*some additional code*/
+    }
+}

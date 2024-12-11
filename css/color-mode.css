@@ -1,0 +1,11 @@
+/* Light mode */
+
+:root {
+  /* Color */
+  --bg: rgb(255, 255, 255);
+
+  /* Face animations*/
+  --tl-1:url(../assets/face-animation-light/tl-1.png)
+}
+
+
