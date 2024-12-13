@@ -76,7 +76,7 @@
   --br-4:url(../assets/face-animation-dark/brw-4.png);
   --br-5:url(../assets/face-animation-dark/brw-5.png);
 
-  --sun: url(../assets/icons/moon.png);
+  --moon: url(../assets/icons/moon.png);
 }
 
 
@@ -103,7 +103,7 @@
 
 .dark-mode #toggle-button{
   background-image: var(--moon);
-}
+} 
 
 .dark-mode #toggle-button{
   justify-content: flex-end;
