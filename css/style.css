@@ -72,7 +72,7 @@ h1,h2,h5,p{
   cursor: pointer;
   text-align: center;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   z-index: 100;
   border-radius: 40%;
   transition: transform 0.2s ease-in-out;
@@ -100,7 +100,67 @@ h1,h2,h5,p{
   padding-bottom: 0.5rem;
 }
 
-#grid__tl__btn :active,
-#grid__br__btn :active{
+#grid__tl__btn:active,
+#grid__br__btn:active{
   transform: rotate(-45deg) scale(1.05);
 }
+
+#grid__bl__btn:active,
+#grid__br__btn:active{
+  transform: rotate(45deg) scale(1.05);
+}
+/*Top left corner*/
+
+#grid__tl__btn{
+top: -11.5rem;
+left: -11.5rem;
+  transform: rotate(-45deg);
+}
+
+#grid__tl__content{
+  width: 30vw;
+  top: 10vh;
+  left: 0;
+  /* transform: translateX(-100vw) translate(-100vh); */
+}
+article{
+  background: rgb(245, 245, 245);
+  font-size: 1.2rem;
+  list-style: none;
+  border: var(--border);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  width: 8.75rem;
+  min-width: 8.75rem;
+}
+
+article h2{
+  font-size: 1.5rem;
+  padding: 0.3rem;
+
+}
+
+article p{
+  padding-bottom: 0.3rem;
+}
+
+article h2, article p{
+  color: #333;
+}
+
+.cards{
+  padding: 0;
+}
+
+.cards__content{
+  display: flex;
+  align-items: center;
+}
+
+.cards__content__text{
+  color: var(--text);
+  text-align: left;
+  margin: 0 1rem;
+}
+
