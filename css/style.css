@@ -121,9 +121,9 @@ left: -11.5rem;
   width: 30vw;
   top: 10vh;
   left: 0;
-  /* transform: translateX(-100vw) translate(-100vh); */
+  transform: translateX(-100vw) translateY(-100vh);
 }
-article{
+article{ 
   background: rgb(245, 245, 245);
   font-size: 1.2rem;
   list-style: none;
