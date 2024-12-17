@@ -7,9 +7,7 @@
   <link rel="icon" type="image/x-icon"
   href="/assets/icons/favicon.ico">
  
-  <script src="js/animation.js" ></script>
-  <script src="js/color-mode.js" defer></script>
-  <script src="js/project-slideshow.js" defer></script>
+  
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/animation.css">
   <link rel="stylesheet" href="/css/color-mode.css">
@@ -26,7 +24,7 @@
   </div>
   <nav id="grid">
     <div id="grid__tl">
-      <div id="grid__tl__btn">About</div>
+      <button id="grid__tl__btn">About</button>
       <div id="grid__tl__content">
         <div class="cards">
           <div class="cards__content">
@@ -52,9 +50,50 @@
         </div>
       </div>
     </div>
+    <div id="grid__tr">
+      <button id="grid__tr__btn">Experience</button>
+      <div id="grid__tr__content">
+        <div class="cards experience">
+          <article class="experience__skill">
+              <h2>Frontend Development</h2>
+              <div>
+                <img src="./assets/icons/checkmark.png" alt="checkmark Icon" class="icon">
+                <div>
+                  <h2>HTML</h2>
+                  <p>Experienced</p>
+                </div>
+              </div>
+              <div>
+                <img src="./assets/icons/checkmark.png" alt="checkmark Icon" class="icon">
+                <div>
+                  <h2>CSS</h2>
+                  <p>Experienced</p>
+                </div>
+              </div>
+              <div>
+                <img src="./assets/icons/checkmark.png" alt="checkmark Icon" class="icon">
+                <div>
+                  <h2>JavaScript</h2>
+                  <p>Experienced</p>
+                </div>
+              </div>
+              <div>
+                <img src="./assets/icons/checkmark.png" alt="checkmark Icon" class="icon">
+                <div>
+                  <h2>React</h2>
+                  <p>Experienced</p>
+                </div>
+              </div>
+          </article>
+      </div>
+    </div>
   </nav>
   <div id="color-mode">
     <div id="toggle-button" class="icon"></div>
   </div>
+
+  <script src="js/animation.js" ></script>
+  <script src="js/color-mode.js" defer></script>
+  <script src="js/project-slideshow.js" defer></script>
 </body>
 </html>
