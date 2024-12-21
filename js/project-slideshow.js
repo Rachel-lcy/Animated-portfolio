@@ -1,0 +1,1 @@
+let project = document.getElementsByClassName("project");

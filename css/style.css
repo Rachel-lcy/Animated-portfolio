@@ -237,6 +237,7 @@ article h2, article p{
 
 .project{
   width: 100%;
+  display: flex;
   flex-wrap: wrap;
   border-radius: 2rem;
   overflow: hidden;
@@ -253,6 +254,7 @@ article h2, article p{
   margin: 0;
   padding: 0.3rem 0;
   font-size: 1rem;
+  color: var(--text-alt);
 }
 
 button{
@@ -261,4 +263,34 @@ button{
   border: none;
   border-radius: 1rem;
   padding: 0.5rem;
+}
+
+.btn{
+  border-radius: 0cm;
+  height: 3rem;
+  flex-basis: 50%;
+  font-weight: 600;
+}
+.arrow{
+  border: var(--border);
+  width: 3rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0.2rem 0;
+}
+
+.btn, .arrow{
+  background: rgb(245, 245, 245);
+  color: #333;
+  transition: all 300ms ease;
+}
+
+.btn:active, .arrow:active{
+  background: var(--bg-alt);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover, .arrow:hover{
+  cursor: pointer;
 }

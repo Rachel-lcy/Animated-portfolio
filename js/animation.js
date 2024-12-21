@@ -94,7 +94,7 @@ function handleWindowResize(){
         trContent.style.zIndex = "200";
         trBtn.style.zIndex = "300";
         tlBtn.style.zIndex = "100";
-        // blBtn.style.zIndex = "100";
+        blBtn.style.zIndex = "100";
         // brBtn.style.zIndex = "100";
 
       } else {
@@ -108,6 +108,61 @@ function handleWindowResize(){
       break;
     case "bottom-left":
       // run some code
+      if(window.innerWidth <= 600){
+        blActive = "translateX(0) translateY(0)";
+        blContent.style.transform = "translateX(0) translateY(0)";
+        blContent.style.width = "100vw";
+        blContent.style.height = "100vh";
+        blContent.style.top = "0";
+        blContent.style.display = "flex";
+        blContent.style.alignItems = "center";
+        blContent.style.justifyContent = "center";
+        blContent.style.background = "var(--bg--transparent)";
+        blContent.style.zIndex = "200";
+        trBtn.style.zIndex = "100";
+        tlBtn.style.zIndex = "100";
+        blBtn.style.zIndex = "300";
+        // brBtn.style.zIndex = "100";
+        projectOne.style.margin = "70%";
+        projectOne.style.margin = "auto auto 0.5rem";
+        projectTwo.style.margin = "70%";
+        projectTwo.style.margin = "auto auto 0.5rem";
+        projectThree.style.margin = "70%";
+        projectThree.style.margin = "auto auto 0.5rem";
+
+      } else if(window.innerWidth <= 1100) {
+        blActive = "translateX(0) translateY(0)";
+        blContent.style.transform = "translateX(0) translateY(0)";
+        blContent.style.width = "100vw";
+        blContent.style.height = "100vh";
+        blContent.style.top = "0";
+        blContent.style.display = "flex";
+        blContent.style.alignItems = "center";
+        blContent.style.justifyContent = "center";
+        blContent.style.background = "var(--bg--transparent)";
+        blContent.style.zIndex = "200";
+        trBtn.style.zIndex = "100";
+        tlBtn.style.zIndex = "100";
+        blBtn.style.zIndex = "300";
+        // brBtn.style.zIndex = "100";
+        projectOne.style.margin = "40%";
+        projectOne.style.margin = "auto auto 0.5rem";
+        projectTwo.style.margin = "40%";
+        projectTwo.style.margin = "auto auto 0.5rem";
+        projectThree.style.margin = "40%";
+        projectThree.style.margin = "auto auto 0.5rem";
+
+      }else {
+        blActive = "translateX(10vw) translateY(7vh)";
+        blContent.style.transform = "translateX(10vw) translateY(7vh)";
+        blContent.style.width = "15rem";
+        blContent.style.height = "0";
+        blContent.style.top = "40vh";
+        blContent.style.display = "block";
+        projectOne.style.width = "100%";
+        projectTwo.style.margin = "100%";
+        projectThree.style.margin = "100%";
+      }
       break;
     case "bottom-right":
       // run some code
@@ -145,7 +200,7 @@ function playAnimation(animation, reverseAnimation){
 function playClosingAnimation(reverseAnimation){
   tlBtn.innerHTML = "About";
   trBtn.innerHTML = "Experience";
-  // blBtn.innerHTML = "projects";
+  blBtn.innerHTML = "projects";
   // brBtn.innerHTML = "Contact";
  
   switch(activeCorner){
@@ -159,11 +214,11 @@ function playClosingAnimation(reverseAnimation){
       trBtn.style.color = textColor;
       trContent.style.transform = trHidden;
       break;
-    // case "bottom-left":
-    //   blBtn.style.background = bgColor;
-    //   blBtn.style.color = textColor;
-    //   blContent.style.transform = blHidden;
-    //   break;
+    case "bottom-left":
+      blBtn.style.background = bgColor;
+      blBtn.style.color = textColor;
+      blContent.style.transform = blHidden;
+      break;
     
     // case "bottom-right":
     //   brBtn.style.background = bgColor;
@@ -188,7 +243,7 @@ tlBtn.onclick = function () {
     playClosingAnimation("reverse-animate-top-left");
   } else {
     trBtn.innerHTML = "Experience";
-    // blBtn.innerHTML = "Projects";
+    blBtn.innerHTML = "Projects";
     // brBtn.innerHTML = "Contact";
 
     //Setting activeCorner
@@ -201,19 +256,19 @@ tlBtn.onclick = function () {
     //Change background color
     trBtn.style.background =bgColor;
     // brBtn.style.background =bgColor;
-    // blBtn.style.background =bgColor;
+    blBtn.style.background =bgColor;
     tlBtn.style.background =bgColorAlt;
 
     //Change text colors
     trBtn.style.color =textColor;
     // brBtn.style.color =textColor;
-    // blBtn.style.color =textColor;
+    blBtn.style.color =textColor;
     tlBtn.style.color =textColorAlt;
 
     //Change positions of the corner content
     trContent.style.transform =trHidden;
     // brContent.style.transform =brHidden;
-    // blContent.style.transform =blHidden;
+    blContent.style.transform =blHidden;
     tlContent.style.transform =tlActive;
   }
 };
@@ -223,7 +278,7 @@ trBtn.onclick = function(){
     playClosingAnimation("reverse-animate-top-right");
   }else{
     tlBtn.innerHTML = "About";
-    // blBtn.innerHTML = "Projects";
+    blBtn.innerHTML = "Projects";
     // brBtn.innerHTML = "Contact";
 
     //Setting activeCorner
@@ -235,58 +290,58 @@ trBtn.onclick = function(){
     //Change background color
     trBtn.style.background =bgColorAlt;
     // brBtn.style.background =bgColor;
-    // blBtn.style.background =bgColor;
+    blBtn.style.background =bgColor;
     tlBtn.style.background =bgColor;
 
     //Change text colors
     trBtn.style.color =textColorAlt;
     // brBtn.style.color =textColor;
-    // blBtn.style.color =textColor;
+    blBtn.style.color =textColor;
     tlBtn.style.color =textColor;
 
     //Change positions of the corner content
     trContent.style.transform =trActive;
     // brContent.style.transform =brHidden;
-    // blContent.style.transform =blHidden;
+    blContent.style.transform =blHidden;
     tlContent.style.transform =tlHidden;
   }
 
 };
 
-// blBtn.onclick = function(){
-//   if(activeCorner  === "bottom-left"){
-//     playClosingAnimation("reverse-animate-bottom-left");
-//   }else{
-//     tlBtn.innerHTML = "About";
-//     trBtn.innerHTML = "Experience";
-//     brBtn.innerHTML = "Contact";
+blBtn.onclick = function(){
+  if(activeCorner  === "bottom-left"){
+    playClosingAnimation("reverse-animate-bottom-left");
+  }else{
+    tlBtn.innerHTML = "About";
+    trBtn.innerHTML = "Experience";
+    //brBtn.innerHTML = "Contact";
 
-//     //Setting activeCorner
-//     activeCorner = "bottom-left";
-//     blBtn.innerHTML = "Projects<br/>&darr;";
-//     handleWindowResize();
-//     playAnimation("animate-bottom-left", "reverse-animate-bottom-left");
+    //Setting activeCorner
+    activeCorner = "bottom-left";
+    blBtn.innerHTML = "Projects<br/>&darr;";
+    handleWindowResize();
+    playAnimation("animate-bottom-left", "reverse-animate-bottom-left");
     
-//     //Change background color
-//     trBtn.style.background =bgColor;
-//     brBtn.style.background =bgColor;
-//     blBtn.style.background =bgColorAlt;
-//     tlBtn.style.background =bgColor;
+    //Change background color
+    trBtn.style.background =bgColor;
+    //brBtn.style.background =bgColor;
+    blBtn.style.background =bgColorAlt;
+    tlBtn.style.background =bgColor;
 
-//     //Change text colors
-//     trBtn.style.color =textColor;
-//     brBtn.style.color =textColor;
-//     blBtn.style.color =textColorAlt;
-//     tlBtn.style.color =textColor;
+    //Change text colors
+    trBtn.style.color =textColor;
+    //brBtn.style.color =textColor;
+    blBtn.style.color =textColorAlt;
+    tlBtn.style.color =textColor;
 
-//     //Change positions of the corner content
-//     trContent.style.transform =trHidden;
-//     brContent.style.transform =brHidden;
-//     blContent.style.transform =blActive;
-//     tlContent.style.transform =tlHidden;
-//   }
+    //Change positions of the corner content
+    trContent.style.transform =trHidden;
+    //brContent.style.transform =brHidden;
+    blContent.style.transform =blActive;
+    tlContent.style.transform =tlHidden;
+  }
 
-// };
+};
 
 // brBtn.onclick= function(){
 //   if(activeCorner  === "bottom-right"){
