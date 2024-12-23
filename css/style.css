@@ -231,8 +231,10 @@ article h2, article p{
 #grid__bl__content{
   width: 15rem;
   bottom: 15vh;
+  justify-content: center;
+  align-items: center;
   left: 0;
-  /* transform: translateX(-100vw) translateY(-100vh); */
+  transform: translateX(-100vw) translateY(-100vh);
 }
 
 .project{

@@ -123,11 +123,11 @@ function handleWindowResize(){
         tlBtn.style.zIndex = "100";
         blBtn.style.zIndex = "300";
         // brBtn.style.zIndex = "100";
-        projectOne.style.margin = "70%";
+        projectOne.style.width = "70%";
         projectOne.style.margin = "auto auto 0.5rem";
-        projectTwo.style.margin = "70%";
+        projectTwo.style.width = "70%";
         projectTwo.style.margin = "auto auto 0.5rem";
-        projectThree.style.margin = "70%";
+        projectThree.style.width = "70%";
         projectThree.style.margin = "auto auto 0.5rem";
 
       } else if(window.innerWidth <= 1100) {
@@ -145,11 +145,11 @@ function handleWindowResize(){
         tlBtn.style.zIndex = "100";
         blBtn.style.zIndex = "300";
         // brBtn.style.zIndex = "100";
-        projectOne.style.margin = "40%";
+        projectOne.style.width = "40%";
         projectOne.style.margin = "auto auto 0.5rem";
-        projectTwo.style.margin = "40%";
+        projectTwo.style.width = "40%";
         projectTwo.style.margin = "auto auto 0.5rem";
-        projectThree.style.margin = "40%";
+        projectThree.style.width = "40%";
         projectThree.style.margin = "auto auto 0.5rem";
 
       }else {
@@ -160,8 +160,8 @@ function handleWindowResize(){
         blContent.style.top = "40vh";
         blContent.style.display = "block";
         projectOne.style.width = "100%";
-        projectTwo.style.margin = "100%";
-        projectThree.style.margin = "100%";
+        projectTwo.style.width = "100%";
+        projectThree.style.width = "100%";
       }
       break;
     case "bottom-right":
@@ -219,7 +219,6 @@ function playClosingAnimation(reverseAnimation){
       blBtn.style.color = textColor;
       blContent.style.transform = blHidden;
       break;
-    
     // case "bottom-right":
     //   brBtn.style.background = bgColor;
     //   brBtn.style.color = textColor;
