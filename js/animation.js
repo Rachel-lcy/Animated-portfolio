@@ -66,8 +66,8 @@ function handleWindowResize(){
         tlContent.style.zIndex = "200";
         tlBtn.style.zIndex = "300";
         trBtn.style.zIndex = "100";
-        // blBtn.style.zIndex = "100";
-        // brBtn.style.zIndex = "100";
+        blBtn.style.zIndex = "100";
+        brBtn.style.zIndex = "100";
 
       } else {
         tlActive = "translateX(5vw) translateY(0)";
@@ -95,7 +95,7 @@ function handleWindowResize(){
         trBtn.style.zIndex = "300";
         tlBtn.style.zIndex = "100";
         blBtn.style.zIndex = "100";
-        // brBtn.style.zIndex = "100";
+        brBtn.style.zIndex = "100";
 
       } else {
         trActive = "translateX(-5vw) translateY(0)";
@@ -122,7 +122,7 @@ function handleWindowResize(){
         trBtn.style.zIndex = "100";
         tlBtn.style.zIndex = "100";
         blBtn.style.zIndex = "300";
-        // brBtn.style.zIndex = "100";
+        brBtn.style.zIndex = "100";
         projectOne.style.width = "70%";
         projectOne.style.margin = "auto auto 0.5rem";
         projectTwo.style.width = "70%";
@@ -144,7 +144,7 @@ function handleWindowResize(){
         trBtn.style.zIndex = "100";
         tlBtn.style.zIndex = "100";
         blBtn.style.zIndex = "300";
-        // brBtn.style.zIndex = "100";
+        brBtn.style.zIndex = "100";
         projectOne.style.width = "40%";
         projectOne.style.margin = "auto auto 0.5rem";
         projectTwo.style.width = "40%";
@@ -166,6 +166,30 @@ function handleWindowResize(){
       break;
     case "bottom-right":
       // run some code
+      if(window.innerWidth <= 1100){
+        brActive = "translateX(0) translateY(0)";
+        brContent.style.transform = "translateX(0) translateY(0)";
+        brContent.style.width = "100vw";
+        brContent.style.height = "100vh";
+        brContent.style.top = "0";
+        brContent.style.display = "flex";
+        brContent.style.alignItems = "center";
+        brContent.style.justifyContent = "center";
+        brContent.style.background = "var(--bg--transparent)";
+        brContent.style.zIndex = "200";
+        trBtn.style.zIndex = "100";
+        tlBtn.style.zIndex = "100";
+        blBtn.style.zIndex = "100";
+        brBtn.style.zIndex = "300";
+
+      } else {
+        brActive = "translateX(-5vw) translateY(0)";
+        brContent.style.transform = "translateX(-5vw) translateY(0)";
+        brContent.style.width = "30vw";
+        brContent.style.height = "0";
+        brContent.style.top = "30vh";
+        brContent.style.display = "block";
+      }
       break;
 
       default:
@@ -201,7 +225,7 @@ function playClosingAnimation(reverseAnimation){
   tlBtn.innerHTML = "About";
   trBtn.innerHTML = "Experience";
   blBtn.innerHTML = "projects";
-  // brBtn.innerHTML = "Contact";
+  brBtn.innerHTML = "Contact";
  
   switch(activeCorner){
     case "top-left":
@@ -219,11 +243,11 @@ function playClosingAnimation(reverseAnimation){
       blBtn.style.color = textColor;
       blContent.style.transform = blHidden;
       break;
-    // case "bottom-right":
-    //   brBtn.style.background = bgColor;
-    //   brBtn.style.color = textColor;
-    //   brContent.style.transform = brHidden;
-    //   break;
+    case "bottom-right":
+      brBtn.style.background = bgColor;
+      brBtn.style.color = textColor;
+      brContent.style.transform = brHidden;
+      break;
 
     default:
   }
@@ -243,7 +267,7 @@ tlBtn.onclick = function () {
   } else {
     trBtn.innerHTML = "Experience";
     blBtn.innerHTML = "Projects";
-    // brBtn.innerHTML = "Contact";
+    brBtn.innerHTML = "Contact";
 
     //Setting activeCorner
     activeCorner = "top-left";
@@ -254,19 +278,19 @@ tlBtn.onclick = function () {
 
     //Change background color
     trBtn.style.background =bgColor;
-    // brBtn.style.background =bgColor;
+    brBtn.style.background =bgColor;
     blBtn.style.background =bgColor;
     tlBtn.style.background =bgColorAlt;
 
     //Change text colors
     trBtn.style.color =textColor;
-    // brBtn.style.color =textColor;
+    brBtn.style.color =textColor;
     blBtn.style.color =textColor;
     tlBtn.style.color =textColorAlt;
 
     //Change positions of the corner content
     trContent.style.transform =trHidden;
-    // brContent.style.transform =brHidden;
+    brContent.style.transform =brHidden;
     blContent.style.transform =blHidden;
     tlContent.style.transform =tlActive;
   }
@@ -278,7 +302,7 @@ trBtn.onclick = function(){
   }else{
     tlBtn.innerHTML = "About";
     blBtn.innerHTML = "Projects";
-    // brBtn.innerHTML = "Contact";
+    brBtn.innerHTML = "Contact";
 
     //Setting activeCorner
     activeCorner = "top-right";
@@ -288,19 +312,19 @@ trBtn.onclick = function(){
     
     //Change background color
     trBtn.style.background =bgColorAlt;
-    // brBtn.style.background =bgColor;
+    brBtn.style.background =bgColor;
     blBtn.style.background =bgColor;
     tlBtn.style.background =bgColor;
 
     //Change text colors
     trBtn.style.color =textColorAlt;
-    // brBtn.style.color =textColor;
+    brBtn.style.color =textColor;
     blBtn.style.color =textColor;
     tlBtn.style.color =textColor;
 
     //Change positions of the corner content
     trContent.style.transform =trActive;
-    // brContent.style.transform =brHidden;
+    brContent.style.transform =brHidden;
     blContent.style.transform =blHidden;
     tlContent.style.transform =tlHidden;
   }
@@ -313,7 +337,7 @@ blBtn.onclick = function(){
   }else{
     tlBtn.innerHTML = "About";
     trBtn.innerHTML = "Experience";
-    //brBtn.innerHTML = "Contact";
+    brBtn.innerHTML = "Contact";
 
     //Setting activeCorner
     activeCorner = "bottom-left";
@@ -323,56 +347,56 @@ blBtn.onclick = function(){
     
     //Change background color
     trBtn.style.background =bgColor;
-    //brBtn.style.background =bgColor;
+    brBtn.style.background =bgColor;
     blBtn.style.background =bgColorAlt;
     tlBtn.style.background =bgColor;
 
     //Change text colors
     trBtn.style.color =textColor;
-    //brBtn.style.color =textColor;
+    brBtn.style.color =textColor;
     blBtn.style.color =textColorAlt;
     tlBtn.style.color =textColor;
 
     //Change positions of the corner content
     trContent.style.transform =trHidden;
-    //brContent.style.transform =brHidden;
+    brContent.style.transform =brHidden;
     blContent.style.transform =blActive;
     tlContent.style.transform =tlHidden;
   }
 
 };
 
-// brBtn.onclick= function(){
-//   if(activeCorner  === "bottom-right"){
-//     playClosingAnimation("reverse-animate-bottom-right");
-//   }else{
-//     tlBtn.innerHTML = "About";
-//     trBtn.innerHTML = "Experience";
-//     blBtn.innerHTML = "Projects";
+brBtn.onclick= function(){
+  if(activeCorner  === "bottom-right"){
+    playClosingAnimation("reverse-animate-bottom-right");
+  }else{
+    tlBtn.innerHTML = "About";
+    trBtn.innerHTML = "Experience";
+    blBtn.innerHTML = "Projects";
 
-//     //Setting activeCorner
-//     activeCorner = "bottom-right";
-//     brBtn.innerHTML = "Contact<br/>&darr;";
-//     handleWindowResize();
-//     playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
+    //Setting activeCorner
+    activeCorner = "bottom-right";
+    brBtn.innerHTML = "Contact<br/>&darr;";
+    handleWindowResize();
+    playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
     
-//     //Change background color
-//     trBtn.style.background =bgColor;
-//     brBtn.style.background =bgColorAlt;
-//     blBtn.style.background =bgColor;
-//     tlBtn.style.background =bgColor;
+    //Change background color
+    trBtn.style.background =bgColor;
+    brBtn.style.background =bgColorAlt;
+    blBtn.style.background =bgColor;
+    tlBtn.style.background =bgColor;
 
-//     //Change text colors
-//     trBtn.style.color =textColor;
-//     brBtn.style.color =textColorAlt;
-//     blBtn.style.color =textColor;
-//     tlBtn.style.color =textColor;
+    //Change text colors
+    trBtn.style.color =textColor;
+    brBtn.style.color =textColorAlt;
+    blBtn.style.color =textColor;
+    tlBtn.style.color =textColor;
 
-//     //Change positions of the corner content
-//     trContent.style.transform =trHidden;
-//     brContent.style.transform =brActive;
-//     blContent.style.transform =blHidden;
-//     tlContent.style.transform =tlHidden;
-//   }
+    //Change positions of the corner content
+    trContent.style.transform =trHidden;
+    brContent.style.transform =brActive;
+    blContent.style.transform =blHidden;
+    tlContent.style.transform =tlHidden;
+  }
 
-// };
+};
