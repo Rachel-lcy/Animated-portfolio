@@ -310,7 +310,7 @@ button{
 #grid__br__content{
   bottom: 15vh;
   right: 5vw;
-  /* transform: translateX(100vw) translateY(100vh); */
+  transform: translateX(100vw) translateY(100vh);
 }
 
 #grid__br__content div{
