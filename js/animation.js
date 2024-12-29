@@ -62,7 +62,7 @@ function handleWindowResize(){
         tlContent.style.display = "flex";
         tlContent.style.alignItems = "center";
         tlContent.style.justifyContent = "center";
-        tlContent.style.background = "var(--bg--transparent)";
+        tlContent.style.background = "var(--bg-transparent)";
         tlContent.style.zIndex = "200";
         tlBtn.style.zIndex = "300";
         trBtn.style.zIndex = "100";
@@ -90,7 +90,7 @@ function handleWindowResize(){
         trContent.style.display = "flex";
         trContent.style.alignItems = "center";
         trContent.style.justifyContent = "center";
-        trContent.style.background = "var(--bg--transparent)";
+        trContent.style.background = "var(--bg-transparent)";
         trContent.style.zIndex = "200";
         trBtn.style.zIndex = "300";
         tlBtn.style.zIndex = "100";
@@ -117,7 +117,7 @@ function handleWindowResize(){
         blContent.style.display = "flex";
         blContent.style.alignItems = "center";
         blContent.style.justifyContent = "center";
-        blContent.style.background = "var(--bg--transparent)";
+        blContent.style.background = "var(--bg-transparent)";
         blContent.style.zIndex = "200";
         trBtn.style.zIndex = "100";
         tlBtn.style.zIndex = "100";
@@ -139,7 +139,7 @@ function handleWindowResize(){
         blContent.style.display = "flex";
         blContent.style.alignItems = "center";
         blContent.style.justifyContent = "center";
-        blContent.style.background = "var(--bg--transparent)";
+        blContent.style.background = "var(--bg-transparent)";
         blContent.style.zIndex = "200";
         trBtn.style.zIndex = "100";
         tlBtn.style.zIndex = "100";
@@ -176,7 +176,7 @@ function handleWindowResize(){
         brContent.style.flexDirection = "column";
         brContent.style.alignItems = "center";
         brContent.style.justifyContent = "center";
-        brContent.style.background = "var(--bg--transparent)";
+        brContent.style.background = "var(--bg-transparent)";
         brContent.style.zIndex = "200";
         trBtn.style.zIndex = "100";
         tlBtn.style.zIndex = "100";

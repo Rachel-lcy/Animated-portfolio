@@ -87,6 +87,7 @@ h1,h2,h5,p{
   text-align: center;
   transition: transform 0.3s ease-in-out;
   color: var(--text--alt);
+  background: var(--bg-transparent);
 }
 
 #grid__tl__btn,
@@ -176,6 +177,7 @@ article h2, article p{
   top: 10vh;
   right: 0;
   transform: translateX(100vw) translateY(-100vh);
+
 }
 
   .experience{
