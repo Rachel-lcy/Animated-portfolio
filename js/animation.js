@@ -171,8 +171,9 @@ function handleWindowResize(){
         brContent.style.transform = "translateX(0) translateY(0)";
         brContent.style.width = "100vw";
         brContent.style.height = "100vh";
-        brContent.style.top = "0";
+        brContent.style.bottom = "0";
         brContent.style.display = "flex";
+        brContent.style.flexDirection = "column";
         brContent.style.alignItems = "center";
         brContent.style.justifyContent = "center";
         brContent.style.background = "var(--bg--transparent)";
@@ -187,7 +188,7 @@ function handleWindowResize(){
         brContent.style.transform = "translateX(-5vw) translateY(0)";
         brContent.style.width = "30vw";
         brContent.style.height = "0";
-        brContent.style.top = "30vh";
+        brContent.style.bottom = "30vh";
         brContent.style.display = "block";
       }
       break;

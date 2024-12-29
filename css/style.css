@@ -106,8 +106,8 @@ h1,h2,h5,p{
   transform: rotate(-45deg) scale(1.05);
 }
 
-#grid__bl__btn:active,
-#grid__br__btn:active{
+#grid__tr__btn:active,
+#grid__bl__btn:active{
   transform: rotate(45deg) scale(1.05);
 }
 
